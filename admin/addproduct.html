@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="image/logo.ico">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+            integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css"
+            rel="stylesheet" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Sofia">
+        <link href='https://fonts.googleapis.com/css?family=Quicksand'
+            rel='stylesheet'>
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link rel="stylesheet"
+            href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+        <script
+            src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script
+            src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/product.js"></script>
+        <script src="js/upload.js"></script>
+        <script>
+        window.onload = function(){
+            loadAProduct();
+        }
+    </script>
+    </head>
+    <body>
+        <div class="admin-container">
+            <!-- Sidebar Navigation -->
+            <div class="sidebars">
+                <h2>Admin Panel</h2>
+                <ul>
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="product.html">Sản phẩm</a></li>
+
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <header>
+                    <h1>Quản Lý Sản Phẩm</h1>
+                </header>
+                <!-- Add Product Form -->
+                <section class="add-product-form" style="height: 500px;">
+                    <h2 id="tieudeweb">Thêm sản phẩm mới</h2>
+                    <form action="javascript:saveProduct()">
+                        <div style="width: 45%;float: left; margin-right: 5%;">
+                            <label for="product-name">Tên sản phẩm:</label>
+                            <input type="text" id="name" required>
+
+                            <label for="product-price">Giá tiền:</label>
+                            <input id="price" required>
+
+                            <label for="product-category">Loại:</label>
+                            <select id="type" required>
+                                <option value="Samsung">Samsung</option>
+                                <option value="Iphone">Iphone</option>
+                            </select>
+
+                            <label for="product-price">Chọn ảnh:</label>
+                            <input id="image" type="file">
+                            <div class="loading" id="loading">
+                                <div class="bar1 bar"></div>
+                            </div><br>
+                            <button type="submit" id="btnthemsp">Thêm sản
+                                phẩm</button>
+                        </div>
+                        <div style="width: 45%;float: left; ">
+                            <label for="product-name">Màn hình:</label>
+                            <input id="screen" required>
+
+                            <label for="product-price">Camera trước:</label>
+                            <input id="frontcam" required>
+
+                            <label for="product-price">Camera sau:</label>
+                            <input id="backcam" required>
+
+                            <label for="product-price">Mô tả:</label>
+                            <textarea id="mota" required>
+
+                        </textarea>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
